@@ -1,0 +1,34 @@
+{
+  "name": "projects-se-ui",
+  "version": "0.0.1",
+  "description": "ui for the search engine",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "npx parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build",
+    "prettier": "npx prettier --check src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PEM-Humboldt/projects-se-ui.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PEM-Humboldt/projects-se-ui/issues"
+  },
+  "homepage": "https://github.com/PEM-Humboldt/projects-se-ui#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "prettier": "2.8.4",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0"
+  }
+}

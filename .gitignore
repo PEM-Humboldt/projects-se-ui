@@ -1,0 +1,20 @@
+node_modules/
+/target/
+.DS_Store
+coverage/
+.nyc_output/
+.cache/
+.parcel-cache/
+dist/
+lib/
+.vscode/
+.idea/
+*.min.js
+# Logs
+logs/
+*.log
+npm-debug.log*
+tmp
+parcel-bundle-reports/
+.verdaccio_storage/
+sourcemap-info.json
