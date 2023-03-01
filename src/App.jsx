@@ -9,25 +9,22 @@ import {
   Button,
   DropdownButton,
   Dropdown,
-  Nav,
-  Tab,
 } from "react-bootstrap";
-
+import { Card } from "./Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [searchText, setSearchText] = useState("");
-  // const [startDate, setStartDate] = useState("");
-  // const [endDate, setEndDate] = useState("");
-  // const [selectedOption, setSelectedOption] = useState("");
-  // const [selectedLocation, setSelectedLocation] = useState("");
-  // const [results, setResults] = useState([]);
-  // const [activeTab, setActiveTab] = useState("tab1");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [selectedTaxonomic, setSelectedTaxonomic] = useState("");
+  const [selectedCountries, setSelectedCountries] = useState("");
+  const [results, setResults] = useState([]);
 
   const handleSearch = () => {
     // perform search based on search parameters
     console.log(
-      `Searching for ${searchText} between ${startDate} and ${endDate}, selected option: ${selectedOption}, selected location: ${selectedLocation}`
+      `Searching for ${searchText} between ${startDate} and ${endDate}, selected Taxonomic: ${selectedTaxonomic}, selected Countries: ${selectedCountries}`
     );
     const fakeResults = [
       {
@@ -79,10 +76,10 @@ function App() {
   return (
     <Container fluid>
       <Row>
-        <Col md={6}>
+        <Col md={4}>
           <div>Textico</div>
         </Col>
-        <Col md={6}>
+        <Col md={4}>
           <Container>
             <Row>
               <Col>
@@ -99,92 +96,98 @@ function App() {
                 </InputGroup>
               </Col>
             </Row>
-            {/* <Row>
-              <Col md={6}>
-                <InputGroup className="mb-3">
-                  <InputGroup.Prepend>
-                    <InputGroup.Text id="start-date">
-                      Start Date
-                    </InputGroup.Text>
-                  </InputGroup.Prepend>
-                  <FormControl
-                    type="date"
-                    aria-label="Start Date"
-                    aria-describedby="start-date"
-                    value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
-                  />
-                </InputGroup>
-              </Col>
-              <Col md={6}>
-                <InputGroup className="mb-3">
-                  <InputGroup.Prepend>
-                    <InputGroup.Text id="end-date">End Date</InputGroup.Text>
-                  </InputGroup.Prepend>
-                  <FormControl
-                    type="date"
-                    aria-label="End Date"
-                    aria-describedby="end-date"
-                    value={endDate}
-                    onChange={(e) => setEndDate(e.target.value)}
-                  />
-                </InputGroup>
-              </Col>
-            </Row>
             <Row>
-              <Col md={6}>
-                <DropdownButton
-                  id="dropdown-basic-button"
-                  title={selectedOption || "Select Option"}
+              <Col md={8}>
+                <Row>
+                  <Col md={6}>
+                    <Form.Label htmlFor="open-query">Start Date</Form.Label>
+                    <InputGroup className="mb-3">
+                      <FormControl
+                        type="date"
+                        aria-label="Start Date"
+                        aria-describedby="start-date"
+                        value={startDate}
+                        onChange={(e) => setStartDate(e.target.value)}
+                      />
+                    </InputGroup>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Label htmlFor="open-query">End Date</Form.Label>
+                    <InputGroup className="mb-3">
+                      <FormControl
+                        type="date"
+                        aria-label="End Date"
+                        aria-describedby="end-date"
+                        value={endDate}
+                        onChange={(e) => setEndDate(e.target.value)}
+                      />
+                    </InputGroup>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={6}>
+                    <DropdownButton
+                      id="dropdown-basic-button"
+                      title={selectedTaxonomic || "Select Taxonomic Group"}
+                    >
+                      <Dropdown.Item
+                        onClick={() => setSelectedTaxonomic("Taxonomic 1")}
+                      >
+                        Taxonomy 1
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => setSelectedTaxonomic("Taxonomic 2")}
+                      >
+                        Taxonomy 2
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => setSelectedTaxonomic("Taxonomic 3")}
+                      >
+                        Taxonomy 3
+                      </Dropdown.Item>
+                    </DropdownButton>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={6}>
+                    <DropdownButton
+                      id="dropdown-basic-button"
+                      title={selectedCountries || "Select Countries"}
+                    >
+                      <Dropdown.Item
+                        onClick={() => setSelectedCountries("Countries 1")}
+                      >
+                        Country 1
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => setSelectedCountries("Countries 2")}
+                      >
+                        Country 2
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => setSelectedCountries("Countries 3")}
+                      >
+                        Country 3
+                      </Dropdown.Item>
+                    </DropdownButton>
+                  </Col>
+                </Row>
+              </Col>
+              <Col md={4}>
+                <Button
+                  variant="outline-secondary"
+                  id="button-addon2"
+                  onClick={handleSearch}
                 >
-                  <Dropdown.Item onClick={() => setSelectedOption("Option 1")}>
-                    Option 1
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={() => setSelectedOption("Option 2")}>
-                    Option 2
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={() => setSelectedOption("Option 3")}>
-                    Option 3
-                  </Dropdown.Item>
-                </DropdownButton>
+                  Search
+                </Button>
               </Col>
             </Row>
-            <Row>
-              <Col md={6}>
-                <DropdownButton
-                  id="dropdown-basic-button"
-                  title={selectedLocation || "Select Location"}
-                >
-                  <Dropdown.Item
-                    onClick={() => setSelectedLocation("Location 1")}
-                  >
-                    Location 1
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    onClick={() => setSelectedLocation("Location 2")}
-                  >
-                    Location 2
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    onClick={() => setSelectedLocation("Location 3")}
-                  >
-                    Location 3
-                  </Dropdown.Item>
-                </DropdownButton>
-              </Col>
-            </Row>
-            <Button
-              variant="outline-secondary"
-              id="button-addon2"
-              onClick={handleSearch}
-            >
-              Search
-            </Button> */}
           </Container>
         </Col>
       </Row>
       <Row>
-        {/* <Col md={8}>
+        <Col md={8}>
           <Row>
             <Col lg={8}>
               <div className="d-flex justify-content-between align-items-center mb-3">
@@ -192,15 +195,7 @@ function App() {
               </div>
               <div className="d-flex flex-wrap">
                 {results.map((result, index) => (
-                  <Card key={index} className="m-2">
-                    <Card.Body>
-                      <Card.Title>{result.title}</Card.Title>
-                      <Card.Text>{result.description}</Card.Text>
-                      <Button variant="primary" className="mb-2">
-                        Expand
-                      </Button>
-                    </Card.Body>
-                  </Card>
+                  <Card key={index} projectInfo={result} />
                 ))}
               </div>
             </Col>
@@ -208,7 +203,7 @@ function App() {
               <div>Small Column</div>
             </Col>
           </Row>
-        </Col> */}
+        </Col>
       </Row>
     </Container>
   );
