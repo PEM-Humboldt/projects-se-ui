@@ -18,3 +18,7 @@ tmp
 parcel-bundle-reports/
 .verdaccio_storage/
 sourcemap-info.json
+
+public/*
+!public/index.html
+!public/styles.css
