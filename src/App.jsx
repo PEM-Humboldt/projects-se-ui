@@ -156,9 +156,10 @@ function App() {
                   </Col>
                 </Row>
                 <Row>
-                  <Col md={6}>
+                  <Col md={12}>
                     <Form.Label htmlFor="countries">Countries</Form.Label>
                     <Typeahead
+                      className="inputMB"
                       id="countries"
                       labelKey="countries"
                       multiple
@@ -170,11 +171,12 @@ function App() {
                   </Col>
                 </Row>
                 <Row>
-                  <Col md={6}>
+                  <Col md={12}>
                     <Form.Label htmlFor="taxonomic-group">
                       Taxonomic Group
                     </Form.Label>
                     <Typeahead
+                      className="inputMB"
                       id="taxonomic-group"
                       labelKey="taxonomic-group"
                       multiple
