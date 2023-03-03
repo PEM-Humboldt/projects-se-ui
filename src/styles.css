@@ -1,0 +1,235 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --black: #000000;
+    --darkGray: #403f3e;
+    --middleGray: #5b5b5b;
+    --lightGray: #6f6f6c;
+    --chrome: #8b8b88;
+    --lightChrome: #ccc8bc;
+    --darkGreen: #1b4333;
+    --lightGreen: #6a8e8a;
+    --lighterGreen: #d3dddc;  
+    --darkRed: #731200;
+    --geoBlue: #115ca2;
+    --geoGreen: #168d78;
+    --geoGray: #80aebd;
+  }
+
+.searchArea {
+    margin: 25px 5% 0 5%;
+    padding: 10px 40px;
+    max-width: 1680px;
+    min-height: 450px;
+    background-image: url(img/searchbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.logoBiab {
+    max-width: 1680px;
+    display: block;
+    padding-left: 40px;
+    margin-left: 5%;
+    margin-top: -40px;
+}
+
+.title {
+    padding-right: 10px;
+}
+
+.title h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    color: black;
+    text-transform: lowercase;
+    line-height: 4.3rem;
+}
+
+.title h3 {
+    color: black;
+    padding: 30px 0;
+}
+
+.title h4 {
+    color: var(--lightGray);
+    max-width: 50%;
+    font-size: 1.3rem;
+}
+
+.searchBox {
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 3px 6px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.14);
+    padding:10px 20px 20px;
+    border-radius: 15px;
+}
+
+.searchBox:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.16), 0 4px 8px rgba(0,0,0,0.23);
+}
+
+.openQ {
+    color: var(--darkRed);
+}
+
+.searchBtnArea {
+    display: flex;
+    flex-direction: column;
+    align-items: end; 
+    justify-content: space-between;
+}
+
+.searchBtn {
+    background-color: black;
+    width: 76px;
+    height: 76px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    display: block;
+    float: right;
+    bottom: 0;
+}
+
+.searchBtn:hover {
+    background-color: var(--darkRed);
+}
+
+.searchBtnIcn {
+    color: white;
+    font-size: 40px;
+}
+
+.resultsArea {
+    padding: 10px 40px 30px;
+}
+
+.resultsArea h4 {
+    font-size: 1.2rem;
+    color: var(--darkGreen);
+    padding-left: 5%;
+    margin-bottom: 0;
+}
+
+.cardsArea {
+    display:flexbox;
+    border-top: 2px solid var(--lightChrome);
+    padding-top: 15px;
+}
+
+.m-2 {
+    width: 300px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.14);
+    border: none;
+}
+
+.m-2:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.16), 0 4px 8px rgba(0,0,0,0.23);
+}
+
+.cardTitle {
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    padding-bottom: 15px;
+    color: var(--darkGray);
+    border-bottom: 2px solid var(--chrome);
+}
+
+.cardInfo {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    padding-left: 7px;
+    color: var(--middleGray);
+}
+
+.expandBtn {
+    color: var(--lighterGreen);
+    display: block;
+    font-size: 30px;
+}
+
+.expandBtn:hover {
+    color: var(--lightGreen);
+}
+
+.resultsNav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border-left: 3px solid var(--lightChrome);
+    row-gap: 10px;
+}
+
+.bigNavBtn {
+    border: 2px solid var(--darkGray);
+    background-color: white;
+    text-transform: uppercase;
+    color: var(--darkGray);
+    letter-spacing: 1px;
+    padding: 5px 7px 5px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    line-height: 25px;
+    vertical-align: top;
+}
+
+.bigNavBtn:hover {
+    background-color: black;
+    border-color: black;
+}
+
+.bigNavTitle {
+    text-transform: uppercase;
+    color: var(--darkGray);
+    letter-spacing: 1px;
+    padding: 15px 15px 5px 7px;
+    font-size: 1.6rem;
+    line-height: 25px;
+    vertical-align: top;
+}
+
+.bigNavBtn svg, .bigNavTitle svg {
+    margin-top: -5px;
+    margin-left: 3px;
+    padding-top: 0;
+}
+
+.taRight {
+    text-align: right;
+}
+
+.navLinks a.linkActive {
+    color: black;
+}
+
+.navLinks a {
+    color: var(--lightChrome);
+    cursor: pointer;
+}
+
+.tags a {
+    background-color: var(--lightChrome);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: var(--lightGreen);
+    color: white;
+}
