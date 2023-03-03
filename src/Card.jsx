@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card as CardBS, Button } from "react-bootstrap";
-import { PlusSquareFill } from "react-bootstrap-icons";
-import { ArrowRightSquareFill } from "react-bootstrap-icons";
+import { PlusSquareFill, ArrowRightSquareFill } from "react-bootstrap-icons";
 
 const Card = ({ projectInfo }) => {
   return (

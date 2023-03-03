@@ -11,13 +11,16 @@ import {
   Dropdown,
 } from "react-bootstrap";
 import { Card } from "./Card";
-import { Search } from "react-bootstrap-icons";
-import { GeoAltFill } from "react-bootstrap-icons";
-import { Unity } from "react-bootstrap-icons";
-import { TagFill } from "react-bootstrap-icons";
-import { EyeFill } from "react-bootstrap-icons";
-import logo from "./img/logoBIAB.png"; // relative path to image
-// import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  Search,
+  GeoAltFill,
+  Unity,
+  TagFill,
+  EyeFill,
+} from "react-bootstrap-icons";
+import logo from "./img/logoBIAB.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
 
 function App() {
   const [searchText, setSearchText] = useState("");
