@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col, Card as CardBS, Button } from "react-bootstrap";
 
 const Card = ({ projectInfo }) => {
