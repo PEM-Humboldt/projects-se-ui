@@ -80,6 +80,22 @@ a {
     color: var(--darkRed);
 }
 
+.inputMB {
+    margin-bottom: 16px;
+}
+
+.rbt-token {
+    color: var(--darkGreen);
+    background-color: var(--lighterGreen);
+}
+
+.form-control:focus, 
+.focus {
+    outline: none !important;
+    border-color: var(--lighterGreen) !important;
+    box-shadow: 0 0 7px var(--lightGreen) !important;
+}
+
 .searchBtnArea {
     display: flex;
     flex-direction: column;

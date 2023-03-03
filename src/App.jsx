@@ -7,10 +7,8 @@ import {
   FormControl,
   Form,
   Button,
-  DropdownButton,
-  Dropdown,
 } from "react-bootstrap";
-import { Card } from "./Card";
+import { Typeahead } from "react-bootstrap-typeahead";
 import {
   Search,
   GeoAltFill,
@@ -18,16 +16,23 @@ import {
   TagFill,
   EyeFill,
 } from "react-bootstrap-icons";
+
+import { Card } from "./Card";
+
+import { countries, taxGroups } from "./consts";
+
 import logo from "./img/logoBIAB.png";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-bootstrap-typeahead/css/Typeahead.css";
 import "./styles.css";
 
 function App() {
   const [searchText, setSearchText] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [selectedTaxonomic, setSelectedTaxonomic] = useState("");
-  const [selectedCountries, setSelectedCountries] = useState("");
+  const [selectedTaxonomic, setSelectedTaxonomic] = useState([]);
+  const [selectedCountries, setSelectedCountries] = useState([]);
   const [results, setResults] = useState([]);
 
   const handleSearch = () => {
@@ -124,9 +129,10 @@ function App() {
               <Col md={8}>
                 <Row>
                   <Col md={6}>
-                    <Form.Label htmlFor="open-query">Start Date</Form.Label>
+                    <Form.Label htmlFor="start-date">Start Date</Form.Label>
                     <InputGroup className="mb-3">
                       <FormControl
+                        id="start-date"
                         type="date"
                         aria-label="Start Date"
                         aria-describedby="start-date"
@@ -136,9 +142,10 @@ function App() {
                     </InputGroup>
                   </Col>
                   <Col md={6}>
-                    <Form.Label htmlFor="open-query">End Date</Form.Label>
+                    <Form.Label htmlFor="end-date">End Date</Form.Label>
                     <InputGroup className="mb-3">
                       <FormControl
+                        id="end-date"
                         type="date"
                         aria-label="End Date"
                         aria-describedby="end-date"
@@ -149,51 +156,35 @@ function App() {
                   </Col>
                 </Row>
                 <Row>
-                  <Col md={6}>
-                    <DropdownButton
-                      id="dropdown-basic-button"
-                      title={selectedTaxonomic || "Select Taxonomic Group"}
-                    >
-                      <Dropdown.Item
-                        onClick={() => setSelectedTaxonomic("Taxonomic 1")}
-                      >
-                        Taxonomy 1
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        onClick={() => setSelectedTaxonomic("Taxonomic 2")}
-                      >
-                        Taxonomy 2
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        onClick={() => setSelectedTaxonomic("Taxonomic 3")}
-                      >
-                        Taxonomy 3
-                      </Dropdown.Item>
-                    </DropdownButton>
+                  <Col md={12}>
+                    <Form.Label htmlFor="countries">Countries</Form.Label>
+                    <Typeahead
+                      className="inputMB"
+                      id="countries"
+                      labelKey="countries"
+                      multiple
+                      onChange={setSelectedCountries}
+                      options={countries}
+                      placeholder="Choose countries..."
+                      selected={selectedCountries}
+                    />
                   </Col>
                 </Row>
                 <Row>
-                  <Col md={6}>
-                    <DropdownButton
-                      id="dropdown-basic-button"
-                      title={selectedCountries || "Select Countries"}
-                    >
-                      <Dropdown.Item
-                        onClick={() => setSelectedCountries("Countries 1")}
-                      >
-                        Country 1
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        onClick={() => setSelectedCountries("Countries 2")}
-                      >
-                        Country 2
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        onClick={() => setSelectedCountries("Countries 3")}
-                      >
-                        Country 3
-                      </Dropdown.Item>
-                    </DropdownButton>
+                  <Col md={12}>
+                    <Form.Label htmlFor="taxonomic-group">
+                      Taxonomic Group
+                    </Form.Label>
+                    <Typeahead
+                      className="inputMB"
+                      id="taxonomic-group"
+                      labelKey="taxonomic-group"
+                      multiple
+                      onChange={setSelectedTaxonomic}
+                      options={taxGroups}
+                      placeholder="Choose taxonomic groups..."
+                      selected={selectedTaxonomic}
+                    />
                   </Col>
                 </Row>
               </Col>
