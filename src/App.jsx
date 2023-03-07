@@ -17,8 +17,7 @@ import {
   EyeFill,
 } from "react-bootstrap-icons";
 
-import { Card } from "./Card";
-
+import { ResultsManager } from "./ResultsManager";
 import { countries, taxGroups } from "./consts";
 
 import logo from "./img/logoBIAB.png";
@@ -213,9 +212,7 @@ function App() {
               </h4>
             </div>
             <div className="d-flex flex-wrap cardsArea">
-              {results.map((result, index) => (
-                <Card key={index} projectInfo={result} />
-              ))}
+              <ResultsManager results={results} />
             </div>
           </Col>
           <Col lg={2} className="resultsNav gy-5">

@@ -1,18 +1,17 @@
 import { Card as CardBS } from "react-bootstrap";
-import { PlusSquareFill } from "react-bootstrap-icons";
 
-const Card = ({ projectInfo, expand }) => {
+const ExpandedCard = ({ projectInfo }) => {
   return (
-    <CardBS className="m-2">
+    <CardBS className="">
       <CardBS.Body>
         <CardBS.Title className="cardTitle">{projectInfo.title}</CardBS.Title>
         <CardBS.Text className="cardInfo">
           {projectInfo.description}
         </CardBS.Text>
-        <PlusSquareFill type="button" className="expandBtn" onClick={expand} />
+        <CardBS.Link>{projectInfo.url}</CardBS.Link>
       </CardBS.Body>
     </CardBS>
   );
 };
 
-export { Card };
+export { ExpandedCard };
