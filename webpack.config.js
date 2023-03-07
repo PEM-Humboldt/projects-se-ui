@@ -73,7 +73,17 @@ module.exports = {
         exclude: /node_modules/, //folder to be excluded
         use: "babel-loader", //loader which we are going to use
       },
-      { test: /\.css$/, use: ["style-loader", "css-loader"] },
+      {
+        test: /\.css$/,
+        loader: "style-loader",
+      },
+      {
+        test: /\.css$/,
+        loader: "css-loader",
+        options: {
+          sourceMap: true,
+        },
+      },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: "asset/resource",
