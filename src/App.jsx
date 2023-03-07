@@ -206,14 +206,14 @@ function App() {
       <Row className="resultsArea d-flex justify-content-center">
         <Row>
           <Col lg={10}>
-            <div className="d-flex justify-content-between align-items-center mb-3">
+            <Row className="d-flex justify-content-between align-items-center mb-3">
               <h4>
                 <b>{results.length}</b> Results
               </h4>
-            </div>
-            <div className="d-flex flex-wrap cardsArea">
+            </Row>
+            <Row className="cardsArea g-3" xs={1} md={2} lg={3} xl={4}>
               <ResultsManager results={results} />
-            </div>
+            </Row>
           </Col>
           <Col lg={2} className="resultsNav gy-5">
             <Button className="bigNavBtn">

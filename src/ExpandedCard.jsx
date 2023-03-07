@@ -1,16 +1,18 @@
-import { Card as CardBS } from "react-bootstrap";
+import { Card as CardBS, Col } from "react-bootstrap";
 
 const ExpandedCard = ({ projectInfo }) => {
   return (
-    <CardBS className="">
-      <CardBS.Body>
-        <CardBS.Title className="cardTitle">{projectInfo.title}</CardBS.Title>
-        <CardBS.Text className="cardInfo">
-          {projectInfo.description}
-        </CardBS.Text>
-        <CardBS.Link>{projectInfo.url}</CardBS.Link>
-      </CardBS.Body>
-    </CardBS>
+    <Col xs={12} md={12} lg={12} xl={12}>
+      <CardBS className="cardsm">
+        <CardBS.Body>
+          <CardBS.Title className="cardTitle">{projectInfo.title}</CardBS.Title>
+          <CardBS.Text className="cardInfo">
+            {projectInfo.description}
+          </CardBS.Text>
+          <CardBS.Link>{projectInfo.url}</CardBS.Link>
+        </CardBS.Body>
+      </CardBS>
+    </Col>
   );
 };
 
