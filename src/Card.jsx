@@ -1,5 +1,5 @@
-import { Container, Row, Col, Card as CardBS, Button } from "react-bootstrap";
-import { PlusSquareFill, ArrowRightSquareFill } from "react-bootstrap-icons";
+import { Card as CardBS } from "react-bootstrap";
+import { PlusSquareFill } from "react-bootstrap-icons";
 
 const Card = ({ projectInfo }) => {
   return (
@@ -10,7 +10,6 @@ const Card = ({ projectInfo }) => {
           <CardBS.Text className="cardInfo">
             {projectInfo.description}
           </CardBS.Text>
-          {/* <CardBS.Link>{projectInfo.url}</CardBS.Link> */}
           <PlusSquareFill type="button" className="expandBtn" />
         </CardBS.Body>
       </CardBS>
