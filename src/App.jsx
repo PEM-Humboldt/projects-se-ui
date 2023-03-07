@@ -45,6 +45,7 @@ function App() {
         title: "Result 1",
         description:
           "This is the first result. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+        contact: "maincontact@geobon.org",
         url: "https://example.com/result1",
         details: "Details for result 1.",
       },
@@ -53,6 +54,7 @@ function App() {
         title: "Result 2",
         description:
           "Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
+        contact: "maincontact@geobon.org",
         url: "https://example.com/result2",
         details: "Details for result 2.",
       },
@@ -61,6 +63,7 @@ function App() {
         title: "Result 3",
         description:
           "This is the third result. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+        contact: "maincontact@geobon.org",
         url: "https://example.com/result3",
         details: "Details for result 3.",
       },
@@ -69,6 +72,7 @@ function App() {
         title: "Result 4",
         description:
           "This is the fourth result. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+        contact: "maincontact@geobon.org",
         url: "https://example.com/result4",
         details: "Details for result 4.",
       },
@@ -77,6 +81,7 @@ function App() {
         title: "Result 5",
         description:
           "This is the fifth result. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+        contact: "maincontact@geobon.org",
         url: "https://example.com/result5",
         details: "Details for result 5.",
       },
@@ -85,6 +90,7 @@ function App() {
         title: "Result 6",
         description:
           "This is the sixth result. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+        contact: "maincontact@geobon.org",
         url: "https://example.com/result6",
         details: "Details for result 6.",
       },

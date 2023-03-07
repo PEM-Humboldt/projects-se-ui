@@ -1,20 +1,28 @@
-import { Card as CardBS, Col } from "react-bootstrap";
+import { Card as CardBS, Col, Row } from "react-bootstrap";
 import { PlusSquareFill } from "react-bootstrap-icons";
 
 const Card = ({ projectInfo, expand }) => {
   return (
     <Col>
-      <CardBS className="cardsm">
+      <CardBS className="cardsm shortInfo">
         <CardBS.Body>
-          <CardBS.Title className="cardTitle">{projectInfo.title}</CardBS.Title>
+          <Row>
+            <Col md={10}>
+              <CardBS.Title className="cardTitle">
+                {projectInfo.title}
+              </CardBS.Title>
+            </Col>
+            <Col md={1}>
+              <PlusSquareFill
+                type="button"
+                className="expandBtn"
+                onClick={expand}
+              />
+            </Col>
+          </Row>
           <CardBS.Text className="cardInfo">
             {projectInfo.description}
           </CardBS.Text>
-          <PlusSquareFill
-            type="button"
-            className="expandBtn"
-            onClick={expand}
-          />
         </CardBS.Body>
       </CardBS>
     </Col>

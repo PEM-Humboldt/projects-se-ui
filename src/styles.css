@@ -15,7 +15,7 @@ a {
     --lightChrome: #ccc8bc;
     --darkGreen: #1b4333;
     --lightGreen: #6a8e8a;
-    --lighterGreen: #d3dddc;  
+    --lighterGreen: #d3dddc;
     --darkRed: #731200;
     --geoBlue: #115ca2;
     --geoGreen: #168d78;
@@ -89,7 +89,7 @@ a {
     background-color: var(--lighterGreen);
 }
 
-.form-control:focus, 
+.form-control:focus,
 .focus {
     outline: none !important;
     border-color: var(--lighterGreen) !important;
@@ -99,7 +99,7 @@ a {
 .searchBtnArea {
     display: flex;
     flex-direction: column;
-    align-items: end; 
+    align-items: end;
     justify-content: space-between;
 }
 
@@ -160,11 +160,14 @@ a {
     border-bottom: 2px solid var(--chrome);
 }
 
-.cardInfo {
+.shortInfo .cardInfo {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+}
+
+.cardInfo {
     padding-left: 7px;
     color: var(--middleGray);
 }
@@ -248,4 +251,9 @@ a {
 .tag:hover {
     background-color: var(--lightGreen);
     color: white;
+}
+
+.dpInline {
+    display: flex;
+    justify-content: space-evenly;
 }

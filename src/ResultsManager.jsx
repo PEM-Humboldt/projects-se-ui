@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Collapse } from "react-bootstrap";
 import { Card } from "./Card";
 import { ExpandedCard } from "./ExpandedCard";
 
@@ -8,7 +9,13 @@ const ResultsManager = ({ results = [] }) => {
     <>
       {results.map((result) => {
         if (expanded === result.id) {
-          return <ExpandedCard key={result.id} projectInfo={result} />;
+          return (
+            <ExpandedCard
+              key={result.id}
+              projectInfo={result}
+              collapse={() => setExpanded(null)}
+            />
+          );
         } else {
           return (
             <Card
